@@ -2,9 +2,9 @@
 <book xmlns="http://docbook.org/ns/docbook"
   xmlns:xlink="http://www.w3.org/1999/xlink">
 <info>
-  <title>Python-ASN1 reference manual</title>
+  <title>uASN1 reference manual</title>
   <author><firstname>Geert</firstname> <surname>Jansen</surname> </author>
-  <copyright><year>2007-2008</year> <holder>Geert Jansen</holder> </copyright>
+  <copyright><year>2007-2021</year> <holder>uASN1 authors</holder> </copyright>
 </info>
 <preface>
   <title>Foreword</title>
@@ -113,7 +113,7 @@
   </para>
 
   <para>
-  Python-ASN1 supports the DER and BER, and none of the other encoding rules.
+  uASN1 supports the DER and BER, and none of the other encoding rules.
   The vast majority of applications use these encoding rules, so at the moment
   no support for additional encoding rules is planned. When generating ASN.1,
   Python-AD will output DER, while for parsing it supports BER. This
@@ -164,8 +164,8 @@
   </para>
 
   <para>
-  The Python-ASN1 API is exposed by a single Python module named
-  <literal>asn1</literal>. The main interface is provided by the following
+  The uASN1 API is exposed by a single Python module named
+  <literal>uasn1</literal>. The main interface is provided by the following
   classes:
 
   <itemizedlist>
@@ -211,7 +211,7 @@
   <title>Type Mapping</title>
 
   <para>
-  The Python-ASN1 encoder and decoder make a difference between primitive and
+  The uASN1 encoder and decoder make a difference between primitive and
   constructed data types. Primitive data types can be encoded and decoded
   directly with <methodname>read()</methodname> and
   <methodname>write()</methodname> methods.  For these types, ASN.1 types are
@@ -248,7 +248,7 @@
   ASN.1 has more data types than Python, the situation arises that one Python
   type corresponds to multiple ASN.1 types. In this sitution the to be encoded
   ASN.1 type cannot be determined from the Python type. The solution
-  implemented in Python-ASN1 is that the most frequently used type will be the
+  implemented in uASN1 is that the most frequently used type will be the
   implicit default, and if another type is desired than that must be specified
   explicitly through the API.
   </para>
@@ -414,9 +414,9 @@
   <title>Error Handling</title>
 
   <para>
-  Errors in Python-ASN1 are reported as exceptions. One exception is defined
+  Errors in uASN1 are reported as exceptions. One exception is defined
   in the <literal>asn1</literal> module: <classname>Error</classname>.  All
-  errors in Python-ASN1 are reported through this exception. This includes
+  errors in uASN1 are reported through this exception. This includes
   encoding errors, decoding errors and usage errors.
   </para>
   </section>
@@ -480,17 +480,21 @@
   <title>Credits</title>
 
   <para>
+  uASN1 is a fork of Python-ASN1 ported for MicroPython. 99 % of credit goes to
+  the original author of Python-ASN1.
+  </para>
+  <para>
   The following projects have provided inspiration for Python-ASN1:
   <itemizedlist>
   <listitem>
   <citation>pyasn1</citation> This is another ASN1
-  encoder/decoder for Python. By studying its source code I got a better
-  understanding of how ASN.1 works.
+  encoder/decoder for Python. By studying its source code I [Geert Jansen] got
+  a better understanding of how ASN.1 works.
   </listitem>
   <listitem>
-  <citation>Samba</citation> I got the idea to use a stack based approach for
-  building constructed types from libads, which is distributed as part of
-  Samba.
+  <citation>Samba</citation> I [Geert Jansen] got the idea to use a stack based
+  approach for building constructed types from libads, which is distributed as
+  part of Samba.
   </listitem>
 
   </itemizedlist>
@@ -516,12 +520,12 @@
   <title>License</title>
 
   <para>
-  The Python-ASN1 software is goverend by the following license (the "MIT"
+  The uASN1 software is goverend by the following license (the "MIT"
   license):
   </para>
 
   <para>
-  Copyright (c) 2007 the Python-ASN1 authors.
+  Copyright (c) 2007-2021 the uASN1 authors.
   </para>
 
   <para>

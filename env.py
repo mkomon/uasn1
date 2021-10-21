@@ -7,11 +7,11 @@
 # from within its source directory. This is required for the test suite,
 # and is helpful for developing. Kudos to the py-lib team for the idea.
 #
-# This file is part of Python-ASN1. Python-ASN1 is free software that is
-# made available under the MIT license. Consult the file "LICENSE" that
-# is distributed together with this file for the exact licensing terms.
+# This file is part of uASN1. uASN1 is free software that is
+# made available under the MIT license. Consult the file "LICENSE" that is
+# distributed together with this file for the exact licensing terms.
 #
-# Python-ASN1 is copyright (c) 2007 by the Python-ASN1 authors. See the
+# uASN1 is copyright (c) 2007-2021 by the uASN1 authors. See the
 # file "AUTHORS" for a complete overview.
 
 import os
@@ -49,6 +49,6 @@ abspath = os.path.abspath(sys.argv[0])
 topdir, fname = os.path.split(abspath)
 
 bindir = os.path.join(topdir, 'bin')
-print prepend_path('PATH', bindir)
+print(prepend_path('PATH', bindir))
 pythondir = os.path.join(topdir, 'lib')
-print prepend_path('PYTHONPATH', pythondir)
+print(prepend_path('PYTHONPATH', pythondir))
