@@ -1,0 +1,8 @@
+{
+    "urls": [
+      ["uasn1.py", "github:mkomon/uasn1/lib/uasn1.py"]
+    ],
+    "deps": [
+    ],
+    "version": "0.1"
+}
